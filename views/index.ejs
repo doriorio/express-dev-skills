@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+<%- include('partials/header') %>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <center>
+    <div class="jumbotron text-white bg-dark"><h5>Welcome to <%= title %></h5></div>
     <a href="/skills">Dev Skills List</a>
+  </center>
+
+    <%- include('partials/footer') %>
   </body>
 </html>
