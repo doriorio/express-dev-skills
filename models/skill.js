@@ -9,7 +9,10 @@ const skills = [
 
   module.exports = {
       skillsUp,
-      skillUp
+      skillUp,
+      create,
+      deleteOne,
+      update
   };
 
   function skillsUp() {
@@ -18,4 +21,16 @@ const skills = [
 
   function skillUp(id) {
       return skills[id];
+  }
+
+  function create(skill){
+      skills.push(skill);
+  }
+
+  function deleteOne(id) {
+      skills.splice(id,1);
+  }
+
+  function update(id, skill) {
+    skills.splice(id, 1, skill);
   }

@@ -1,22 +1,19 @@
 <%- include('../partials/header') %>
-    <title><%= title %>></title>
+    <title><%= title %></title>
 
 </head>
 <body>
 
     <div class="jumbotron text-white bg-dark"><h3><%= title %></h3></div>
-    <ol>
+   
         <% skills.forEach(function(s, idx) { %>
-            <li>
                 
-                <a class="list-group-item list-group-item-action" href="/skills/<%= idx %>"><%= s.skill %></a>
+            <center> <a href="/skills/<%= idx %>"><%= s.skill %></a></center>
             
-            </li>
 
             <% }); %>
 
-    </ol>
-
+    <button><a href="/skills/new">Add Skill</a></button>
     <%- include('../partials/footer') %>
 </body>
 </html>

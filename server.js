@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
 var skillsRouter = require('./routes/skills');
@@ -27,6 +28,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+app.use(methodOverride('_method'));
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development

@@ -7,6 +7,10 @@
     <div class="jumbotron text-white bg-dark"><h3><%= skill.skill %></h3></div>
         <li> <%= skill.level %> /5 Comfort Level</li>
         <li><%= skill.isSoftSkill ? 'Soft Skill' : 'Hard Skill' %></li>
+        <a href="/skills/<%= skillId %>/edit">Edit Skill</a><br>
+        <a href="/skills/<%= skillId %>/delete">Delete Skill</a>
+
     </center>
+    <%- include('../partials/footer') %>
 </body>
 </html>
