@@ -11,7 +11,7 @@ const skills = [
       skillsUp,
       skillUp,
       create,
-      deleteOne,
+      delete: deleteOne,
       update
   };
 

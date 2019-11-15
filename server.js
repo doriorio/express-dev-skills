@@ -19,6 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/skills', skillsRouter);
@@ -28,7 +29,6 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-app.use(methodOverride('_method'));
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development

@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+    <title><%= skill.skill %></title>
+
+</head>
+<body>
+    <center>
+    <div class="jumbotron text-white bg-dark"><h3>Edit <%= skill.skill %></h3></div>
+    <form action="/skills/<%= skillId %>?_method=PUT" method="POST" autocomplete="off">
+        <label>
+               Skill Name
+        <input type="text" name="skill" value="<%= skill.skill %>">
+        </label>
+        <br>
+        <label>
+            Skill Level
+            <input type="text" name="level" value="<%= skill.level %>">
+        </label>
+        <br>
+        <label>
+            Is soft skill?
+            <input type="checkbox" name="isSoftSkill" <%= skill.isSoftSkill ? 'checked' : '' %>>
+        </label>
+       <br>
+        <button type="submit">Update Skill</button>
+    
+    
+    </form>
+
+    </center>
+    <%- include('../partials/footer') %>
+</body>
+</html>

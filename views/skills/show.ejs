@@ -8,8 +8,12 @@
         <li> <%= skill.level %> /5 Comfort Level</li>
         <li><%= skill.isSoftSkill ? 'Soft Skill' : 'Hard Skill' %></li>
         <a href="/skills/<%= skillId %>/edit">Edit Skill</a><br>
-        <a href="/skills/<%= skillId %>/delete">Delete Skill</a>
-
+        
+       
+        <form action="/skills/<%= skillId %>?_method=DELETE"
+            method="POST" >
+            <button type="submit">Delete</button>
+          </form>
     </center>
     <%- include('../partials/footer') %>
 </body>

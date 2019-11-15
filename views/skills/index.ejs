@@ -8,12 +8,13 @@
    
         <% skills.forEach(function(s, idx) { %>
                 
-            <center> <a href="/skills/<%= idx %>"><%= s.skill %></a></center>
-            
-
-            <% }); %>
-
-    <button><a href="/skills/new">Add Skill</a></button>
+            <center> <a href="/skills/<%= idx %>"><%= s.skill %></a>
+                
+                
+                <% }); %>
+                
+                <br><button><a href="/skills/new">Add Skill</a></button>
+            </center>
     <%- include('../partials/footer') %>
 </body>
 </html>

@@ -11,6 +11,11 @@ module.exports = {
     update
 };
 
+function update(req, res){
+    req.body.softSkill = req.body.softSkill === 'on';
+    Skill.update(req.params.id, req.body);
+    res.redirect(`/skills/${req.params.id}`);
+}
 
 function index(req, res) {
     res.render('skills/index', {
@@ -26,6 +31,7 @@ function index(req, res) {
 
       });
   }
+  
 
   function edit(req, res){
       res.render('skills/edit', {
@@ -34,16 +40,9 @@ function index(req, res) {
       });
   }
 
-  function update(req, res){
-      req.body.softSkill = req.body.softSkill === 'on';
-      console.log(req.body)
-      Skill.update(req.params.id, req.body);
-      res.redirect(`/skills/${req.params.id}`);
-
-  }
 
   function deleteSkill(req,res){
-      Skill.deleteOne(req.params.id);
+      Skill.delete(req.params.id);
       res.redirect('/skills');
   }
 

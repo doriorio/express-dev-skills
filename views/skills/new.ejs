@@ -6,7 +6,25 @@
     <center> 
     <div class="jumbotron text-white bg-dark"><h3>Add A Skill</h3></div>
         <form action="/skills" method="POST" autocomplete="off">
-        <input type="text" name="skill">
+       <label>
+           Name of Skill
+            <input type="text" name="skill">
+        </label><br>
+
+        <label>
+            Where 5 is extremely comfortable and 1 is not at all comfortable, how comfortable are you?
+            <br>(1-5 scale)<br>
+        <input type="text" name="level">
+        </label><br>
+        <label>
+            Is soft skill?
+            <input type="checkbox" name="isSoftSkill">
+        </label><br>
+
+
+
+
+
         <button type="submit">Save Skill</button>
         </form>
     </center>
